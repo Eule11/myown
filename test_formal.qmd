@@ -1,0 +1,28 @@
+---
+title: "Draft Code"
+author: "Group 06"
+number-sections: true
+format: 
+  html:
+    embed-resources: true
+    code-tools: true
+  pdf: default
+editor_options: 
+  chunk_output_type: console
+execute:
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+# Formal Data Analysis {#sec-FDA}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+model1 <- glm(rating_new ~ year + length + budget + votes + genre, data = dataset, 
+                  family = binomial(link = "logit"))
+model1 %>%
+  summary()
+```
